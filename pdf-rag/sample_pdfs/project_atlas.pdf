@@ -1,0 +1,142 @@
+%PDF-1.3
+%‚„œ”
+1 0 obj
+<<
+/Producer (pypdf)
+>>
+endobj
+2 0 obj
+<<
+/Type /Pages
+/Count 3
+/Kids [ 4 0 R 5 0 R 6 0 R ]
+>>
+endobj
+3 0 obj
+<<
+/Type /Catalog
+/Pages 2 0 R
+>>
+endobj
+4 0 obj
+<<
+/Type /Page
+/Resources <<
+/Font <<
+/F1 <<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica
+>>
+>>
+>>
+/MediaBox [ 0.0 0.0 612 792 ]
+/Parent 2 0 R
+/Contents <<
+/Length 525
+>>
+stream
+BT
+/F1 12 Tf
+72 720 Td
+14 TL
+(Project Atlas: Technical Overview) Tj T*
+() Tj T*
+(Project Atlas is an internal data-platform initiative kicked off in) Tj T*
+(March 2026. The platform unifies telemetry from three subsystems:) Tj T*
+(ingestion, storage, and query routing. It targets sub-second p99) Tj T*
+(latency for analytical queries on datasets up to 10 TB.) Tj T*
+() Tj T*
+(The lead architect is Priya Raman. Engineering is split across two) Tj T*
+(pods: Pod Echo handles ingestion and Pod Foxtrot handles query.) Tj T*
+ET
+endstream
+>>
+endobj
+5 0 obj
+<<
+/Type /Page
+/Resources <<
+/Font <<
+/F1 <<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica
+>>
+>>
+>>
+/MediaBox [ 0.0 0.0 612 792 ]
+/Parent 2 0 R
+/Contents <<
+/Length 452
+>>
+stream
+BT
+/F1 12 Tf
+72 720 Td
+14 TL
+(Architecture and Storage) Tj T*
+() Tj T*
+(Atlas uses a columnar storage layer based on Apache Parquet, with) Tj T*
+(a metadata service backed by FoundationDB. Compaction runs every) Tj T*
+(six hours and emits Prometheus metrics on the namespace) Tj T*
+(atlas.compaction.*.) Tj T*
+() Tj T*
+(Hot data lives in NVMe-backed nodes; cold data tiers to S3 after) Tj T*
+(30 days. Replication factor is 3 in the hot tier.) Tj T*
+ET
+endstream
+>>
+endobj
+6 0 obj
+<<
+/Type /Page
+/Resources <<
+/Font <<
+/F1 <<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica
+>>
+>>
+>>
+/MediaBox [ 0.0 0.0 612 792 ]
+/Parent 2 0 R
+/Contents <<
+/Length 455
+>>
+stream
+BT
+/F1 12 Tf
+72 720 Td
+14 TL
+(Operational Notes) Tj T*
+() Tj T*
+(On-call rotation is weekly. The runbook lives at docs/atlas/runbook.md.) Tj T*
+(Page severity is set by the SEV field in PagerDuty: SEV1 pages the) Tj T*
+(primary oncall and the architect; SEV3 only emails the team list.) Tj T*
+() Tj T*
+(Known issue: query routing occasionally misroutes when a tenant has) Tj T*
+(more than 2,000 partitions. Workaround is documented in JIRA-4421.) Tj T*
+ET
+endstream
+>>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000015 00000 n 
+0000000054 00000 n 
+0000000125 00000 n 
+0000000174 00000 n 
+0000000910 00000 n 
+0000001573 00000 n 
+trailer
+<<
+/Size 7
+/Root 3 0 R
+/Info 1 0 R
+>>
+startxref
+2239
+%%EOF
